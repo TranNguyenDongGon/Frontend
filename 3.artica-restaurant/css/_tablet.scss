@@ -1,4 +1,4 @@
-@media (max-width:576px) {
+@media (min-width: 576px) and (max-width:992px) {
 	.topheader{
 		height: auto;
 		text-align: center;
@@ -13,18 +13,18 @@
 		}
 		// end phone-number
 		&__openning{
+			text-align: center;
 			width: 100%;
 			padding:0 0 0 0;
 		}
 	}
 	// end topheader
-
 	.menu{
 		&__right{
 			text-align: center;
 			li.nav-item{
 				a.nav-link{
-					font-size: 16px;
+					font-size: 20px;
 				}
 				// ned a
 				a.nav-link.nav-link-btn{
@@ -35,16 +35,4 @@
 	}
 	}
 	// end menu
-
-	.slideshow{
-		a.carousel-control-next,a.carousel-control-prev{
-			top: 80%;
-			right: 30%;
-
-	}
-		a.carousel-control-prev{
-			left: 30%;
-		}
-	}
-	// end slide show
 }
