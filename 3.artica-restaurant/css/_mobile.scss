@@ -36,6 +36,12 @@
 	}
 	// end menu
 
+	.mynav{
+		&.fixedNav{
+			position: unset;
+		}
+	}
+
 	.slideshow{
 		a.carousel-control-next,a.carousel-control-prev{
 			top: 80%;
@@ -62,4 +68,44 @@
 		// end details
 	}
 	// end about
+
+	.menu{
+		width: 350px;
+		&__categorys{
+			ul{
+				margin-bottom: 0px;
+				padding-left: 0px;
+				li{
+					padding: 0px 5px;
+				}
+			}
+		}
+		// end category
+
+		&__list{
+
+			.food{
+				&__left{
+					margin-right: 10px;
+				}
+				&__right{
+					.info{
+						width: 250px;
+					}
+				}
+			}
+			// end food
+		}
+		// end list
+	}
+	// end menu
+
+	.specialDishes .owl-carousel .owl-nav.disabled {
+		display: block;
+		position: absolute;
+		top: -50px;
+		right: 1135px;
+	}
+
+	// end owl-carousel
 }

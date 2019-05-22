@@ -281,6 +281,11 @@ html,body{
 	background:url(../images/7.jpg) center;
 	background-attachment: fixed;
 
+	&.bg{
+		background: linear-gradient(#00000091, #0000009e), url(../images/8.jpg) center;	
+		background-attachment: fixed;
+	}
+
 	&__title{
 		h4{
 			font-family: $font-dancing;
@@ -420,8 +425,10 @@ html,body{
 // end menu
 
 .specialDishes{
+	overflow: hidden;
 	width: 100%;
-	margin: 100px 0px;
+	height: 650px;
+	margin: 100px 0px 0px 0px;
 	font-family: $font-roboto;
 	background: linear-gradient(#0000005e, black), url(../images/5.jpg) center no-repeat;	position: relative;
 
@@ -437,48 +444,56 @@ html,body{
 			font-weight: bold;
 		}
 		// end title
-		.slideButton{
-			width: 30%;
-			text-align: right;
-
-			.button{
-				display: inline-block;
-				width: 33px;
-				height: 33px;
-				line-height: 33px;
-				text-align: center;
-				margin-right: 10px;
-				color: white;
-				background-color: #373737;
-				font-size: 10px;
-				cursor: pointer;
-				transition: 0.3s;
-
-				&:last-child{
-					margin-right: 0px;
-				}
-
-				&:hover{
-					color: $highlight-color;
-					background-color: #4d3e1e;
-				}
-			}
-		}
-		// end slideButton
 	}
 	// end top
 
-	&__dishes{
+	.owl-carousel{
 		display: flex;
 		width: 1485px;
 		margin: auto;
 
-		.dish{
+		.owl-stage-outer{
+			overflow: visible;
+			.owl-stage{
+				.owl-item{
+					width: 360px!important;
+				}
+			}
+		}
+		// end owl-stage-outer
+
+		.owl-nav{
+			&.disabled{
+				display: block;
+				position: absolute;
+				top: -50px;
+				right: 335px;
+			}
+
+			.owl-prev,.owl-next{
+				width:33px;
+				height: 33px;
+				text-align: center;
+				line-height: 33px;
+				background-color: #373737;
+				color:white;
+				font-size: 10px;
+
+				&:hover{
+					background-color: #4d3e1e;
+					color: $highlight-color;
+				}
+			}
+			// end owl-next, owl-prev
+		}
+		// end owl-nav
+		.item{
 			display: block;
 			width: 360px;
-			margin-right: 15px;
+			transition: 0.5s;
+			transform: translateX(0);
 
-			&__img{
+			.dish__img{
 				position: relative;
 
 				.new{
@@ -499,7 +514,7 @@ html,body{
 				margin-right: 0px;
 			}
 
-			&__info{
+			.dish__info{
 				width: 100%;
 				display: flex;
 				padding: 25px 0 15px 0;
@@ -534,10 +549,161 @@ html,body{
 				}
 			}
 			// end hover
+
+
 		}
 		// end dish
 	}
 	// end dishes
 }
+
+// end .specialDishes 
+
+.masterchef{
+	width: 100%;
+	background: url(../images/bg_master.png) center;
+	&__left{
+		display: flex;
+		align-items: center;
+
+		&__info{
+			h5{
+				font-family: $font-oswald;
+				font-size: 30px;
+				color: #333333;
+			}
+
+			h6{
+				font-family: $font-dancing;
+				font-size: 31px;
+				color: $highlight-color;
+			}
+
+			p{
+				font-family: $font-roboto;
+				font-size: 14px;
+				color: #777777;
+				line-height: 26px;
+			}
+
+			.social{
+				a{
+					display: inline-block;
+					width: 38px;
+					height: 38px;
+					text-align: center;
+					line-height: 38px;
+					color: white;
+					background-color: #333333;
+					border-radius: 2px;
+					margin-right: 10px;
+					transition: 0.4s;
+
+					&:last-child{
+						margin-right: 0px;
+					}
+
+					&:hover{
+						color: $highlight-color;
+					}
+				}
+				// end a
+			}
+			// end social
+		}
+		// end info
+	}
+	// end left
+}
+// end mastercheft
+
+.book{
+	margin: 120px 0px;
+	&__top{
+		font-family: $font-roboto;
+		h5{
+			font-size: 26px;
+			color: #333333;
+			font-weight: bold;
+			margin-bottom: 30px;
+		}
+
+		p{
+			font-size: 15px;
+			color: #777777;
+			line-height: 26px;
+
+			span{
+				color:$highlight-color;
+			}
+		}
+
+		.phone{
+			font-family: $font-oswald;
+			color: #333333;
+			font-size: 25px;
+			font-weight: bold;
+		}
+		// end phone
+	}
+	// end top
+
+	.hr{
+		width: 100%;
+		height: 1px;
+		background: #e4e4e4;
+		margin: 60px 0px;
+	}
+
+	&__bottom{
+		font-family: $font-roboto;
+		h5{
+			color: #333333;
+			font-size: 22px;
+			margin-bottom: 30px;
+			font-weight: bold;
+		}
+
+		.form-group{
+			position: relative;
+			margin-bottom: 30px;
+			height: 45px;
+			input{
+				height: 45px;
+				padding-left: 20px;
+				color: #777777;
+				font-size: 13px;
+			}
+
+			i{
+				position: absolute;
+				top: 40px;
+				right: 10px;
+				color: #777777;
+			}
+		}
+		// end onput
+		
+		a.booknow{
+			text-transform: uppercase;
+			width: 160px;
+			height: 50px;
+			display: inline-block;
+			background-color: $highlight-color;
+			text-align: center;
+			line-height: 50px;
+			font-size: 12px;
+			font-weight: bold;
+			color: #333333;
+			margin-top: 50px;
+
+			&:hover{
+				text-decoration: none;
+			}
+		}
+	}
+	// end bottom
+}
+// end book
 @import "mobile";
 @import "tablet";

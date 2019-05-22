@@ -631,6 +631,12 @@ html, body {
   background-attachment: fixed;
 }
 
+.banner.bg {
+  background: -webkit-gradient(linear, left top, left bottom, from(#00000091), to(#0000009e)), url(../images/8.jpg) center;
+  background: linear-gradient(#00000091, #0000009e), url(../images/8.jpg) center;
+  background-attachment: fixed;
+}
+
 .banner__title h4 {
   font-family: "Dancing Script", cursive;
   color: #feb518;
@@ -757,8 +763,10 @@ html, body {
 }
 
 .specialDishes {
+  overflow: hidden;
   width: 100%;
-  margin: 100px 0px;
+  height: 650px;
+  margin: 100px 0px 0px 0px;
   font-family: "Roboto Slab", serif;
   background: -webkit-gradient(linear, left top, left bottom, from(#0000005e), to(black)), url(../images/5.jpg) center no-repeat;
   background: linear-gradient(#0000005e, black), url(../images/5.jpg) center no-repeat;
@@ -780,36 +788,7 @@ html, body {
   font-weight: bold;
 }
 
-.specialDishes__top .slideButton {
-  width: 30%;
-  text-align: right;
-}
-
-.specialDishes__top .slideButton .button {
-  display: inline-block;
-  width: 33px;
-  height: 33px;
-  line-height: 33px;
-  text-align: center;
-  margin-right: 10px;
-  color: white;
-  background-color: #373737;
-  font-size: 10px;
-  cursor: pointer;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-}
-
-.specialDishes__top .slideButton .button:last-child {
-  margin-right: 0px;
-}
-
-.specialDishes__top .slideButton .button:hover {
-  color: #feb518;
-  background-color: #4d3e1e;
-}
-
-.specialDishes__dishes {
+.specialDishes .owl-carousel {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -817,17 +796,50 @@ html, body {
   margin: auto;
 }
 
-.specialDishes__dishes .dish {
-  display: block;
-  width: 360px;
-  margin-right: 15px;
+.specialDishes .owl-carousel .owl-stage-outer {
+  overflow: visible;
 }
 
-.specialDishes__dishes .dish__img {
+.specialDishes .owl-carousel .owl-stage-outer .owl-stage .owl-item {
+  width: 360px !important;
+}
+
+.specialDishes .owl-carousel .owl-nav.disabled {
+  display: block;
+  position: absolute;
+  top: -50px;
+  right: 335px;
+}
+
+.specialDishes .owl-carousel .owl-nav .owl-prev, .specialDishes .owl-carousel .owl-nav .owl-next {
+  width: 33px;
+  height: 33px;
+  text-align: center;
+  line-height: 33px;
+  background-color: #373737;
+  color: white;
+  font-size: 10px;
+}
+
+.specialDishes .owl-carousel .owl-nav .owl-prev:hover, .specialDishes .owl-carousel .owl-nav .owl-next:hover {
+  background-color: #4d3e1e;
+  color: #feb518;
+}
+
+.specialDishes .owl-carousel .item {
+  display: block;
+  width: 360px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.specialDishes .owl-carousel .item .dish__img {
   position: relative;
 }
 
-.specialDishes__dishes .dish__img .new {
+.specialDishes .owl-carousel .item .dish__img .new {
   position: absolute;
   width: 61px;
   height: 19px;
@@ -840,11 +852,11 @@ html, body {
   border-radius: 1px;
 }
 
-.specialDishes__dishes .dish:last-child {
+.specialDishes .owl-carousel .item:last-child {
   margin-right: 0px;
 }
 
-.specialDishes__dishes .dish__info {
+.specialDishes .owl-carousel .item .dish__info {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -857,28 +869,171 @@ html, body {
   transition: 0.5s;
 }
 
-.specialDishes__dishes .dish__info .name {
+.specialDishes .owl-carousel .item .dish__info .name {
   width: 70%;
 }
 
-.specialDishes__dishes .dish__info .price {
+.specialDishes .owl-carousel .item .dish__info .price {
   width: 30%;
   text-align: right;
 }
 
-.specialDishes__dishes .dish p {
+.specialDishes .owl-carousel .item p {
   margin-bottom: 0px;
   padding-bottom: 70px;
   font-size: 14px;
   color: #aaaaaa;
 }
 
-.specialDishes__dishes .dish:hover {
+.specialDishes .owl-carousel .item:hover {
   text-decoration: none;
 }
 
-.specialDishes__dishes .dish:hover .dish__info {
+.specialDishes .owl-carousel .item:hover .dish__info {
   color: #feb518;
+}
+
+.masterchef {
+  width: 100%;
+  background: url(../images/bg_master.png) center;
+}
+
+.masterchef__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.masterchef__left__info h5 {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  color: #333333;
+}
+
+.masterchef__left__info h6 {
+  font-family: "Dancing Script", cursive;
+  font-size: 31px;
+  color: #feb518;
+}
+
+.masterchef__left__info p {
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  color: #777777;
+  line-height: 26px;
+}
+
+.masterchef__left__info .social a {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  text-align: center;
+  line-height: 38px;
+  color: white;
+  background-color: #333333;
+  border-radius: 2px;
+  margin-right: 10px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.masterchef__left__info .social a:last-child {
+  margin-right: 0px;
+}
+
+.masterchef__left__info .social a:hover {
+  color: #feb518;
+}
+
+.book {
+  margin: 120px 0px;
+}
+
+.book__top {
+  font-family: "Roboto Slab", serif;
+}
+
+.book__top h5 {
+  font-size: 26px;
+  color: #333333;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.book__top p {
+  font-size: 15px;
+  color: #777777;
+  line-height: 26px;
+}
+
+.book__top p span {
+  color: #feb518;
+}
+
+.book__top .phone {
+  font-family: "Oswald", sans-serif;
+  color: #333333;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.book .hr {
+  width: 100%;
+  height: 1px;
+  background: #e4e4e4;
+  margin: 60px 0px;
+}
+
+.book__bottom {
+  font-family: "Roboto Slab", serif;
+}
+
+.book__bottom h5 {
+  color: #333333;
+  font-size: 22px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+.book__bottom .form-group {
+  position: relative;
+  margin-bottom: 30px;
+  height: 45px;
+}
+
+.book__bottom .form-group input {
+  height: 45px;
+  padding-left: 20px;
+  color: #777777;
+  font-size: 13px;
+}
+
+.book__bottom .form-group i {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  color: #777777;
+}
+
+.book__bottom a.booknow {
+  text-transform: uppercase;
+  width: 160px;
+  height: 50px;
+  display: inline-block;
+  background-color: #feb518;
+  text-align: center;
+  line-height: 50px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333333;
+  margin-top: 50px;
+}
+
+.book__bottom a.booknow:hover {
+  text-decoration: none;
 }
 
 @media (max-width: 576px) {
@@ -907,6 +1062,9 @@ html, body {
   .menu__right li.nav-item a.nav-link.nav-link-btn {
     margin-top: 10px;
   }
+  .mynav.fixedNav {
+    position: unset;
+  }
   .slideshow a.carousel-control-next, .slideshow a.carousel-control-prev {
     top: 80%;
     right: 30%;
@@ -920,6 +1078,28 @@ html, body {
   .about__details__readmore {
     margin-bottom: 20px;
     display: block;
+  }
+  .menu {
+    width: 350px;
+  }
+  .menu__categorys ul {
+    margin-bottom: 0px;
+    padding-left: 0px;
+  }
+  .menu__categorys ul li {
+    padding: 0px 5px;
+  }
+  .menu__list .food__left {
+    margin-right: 10px;
+  }
+  .menu__list .food__right .info {
+    width: 250px;
+  }
+  .specialDishes .owl-carousel .owl-nav.disabled {
+    display: block;
+    position: absolute;
+    top: -50px;
+    right: 1135px;
   }
 }
 

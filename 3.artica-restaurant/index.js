@@ -3,6 +3,9 @@
 
 	var menuItem = document.querySelectorAll('.menu__categorys ul li');
 	var mynav = document.querySelector('.mynav');
+	var prev_slide_button = document.querySelector('.slideButton .prev');
+	var next_slide_button = document.querySelector('.slideButton .next');
+	var dishes = document.querySelectorAll('.dish');
 	var added = false;
 	window.addEventListener('scroll',function(){
 
@@ -41,5 +44,10 @@
 			iso.arrange({ filter: attr });
 		})
 	}
+
+
+	
 },false)
+
+
  
