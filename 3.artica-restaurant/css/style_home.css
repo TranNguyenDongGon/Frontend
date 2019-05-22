@@ -756,6 +756,131 @@ html, body {
   color: #777777;
 }
 
+.specialDishes {
+  width: 100%;
+  margin: 100px 0px;
+  font-family: "Roboto Slab", serif;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0000005e), to(black)), url(../images/5.jpg) center no-repeat;
+  background: linear-gradient(#0000005e, black), url(../images/5.jpg) center no-repeat;
+  position: relative;
+}
+
+.specialDishes__top {
+  padding: 45px 0 0  0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.specialDishes__top .title {
+  width: 70%;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.specialDishes__top .slideButton {
+  width: 30%;
+  text-align: right;
+}
+
+.specialDishes__top .slideButton .button {
+  display: inline-block;
+  width: 33px;
+  height: 33px;
+  line-height: 33px;
+  text-align: center;
+  margin-right: 10px;
+  color: white;
+  background-color: #373737;
+  font-size: 10px;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.specialDishes__top .slideButton .button:last-child {
+  margin-right: 0px;
+}
+
+.specialDishes__top .slideButton .button:hover {
+  color: #feb518;
+  background-color: #4d3e1e;
+}
+
+.specialDishes__dishes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 1485px;
+  margin: auto;
+}
+
+.specialDishes__dishes .dish {
+  display: block;
+  width: 360px;
+  margin-right: 15px;
+}
+
+.specialDishes__dishes .dish__img {
+  position: relative;
+}
+
+.specialDishes__dishes .dish__img .new {
+  position: absolute;
+  width: 61px;
+  height: 19px;
+  line-height: 19px;
+  text-align: center;
+  color: #333333;
+  background-color: #feb518;
+  top: 40px;
+  left: 20px;
+  border-radius: 1px;
+}
+
+.specialDishes__dishes .dish:last-child {
+  margin-right: 0px;
+}
+
+.specialDishes__dishes .dish__info {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 25px 0 15px 0;
+  font-family: "Oswald", sans-serif;
+  font-size: 17px;
+  color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.specialDishes__dishes .dish__info .name {
+  width: 70%;
+}
+
+.specialDishes__dishes .dish__info .price {
+  width: 30%;
+  text-align: right;
+}
+
+.specialDishes__dishes .dish p {
+  margin-bottom: 0px;
+  padding-bottom: 70px;
+  font-size: 14px;
+  color: #aaaaaa;
+}
+
+.specialDishes__dishes .dish:hover {
+  text-decoration: none;
+}
+
+.specialDishes__dishes .dish:hover .dish__info {
+  color: #feb518;
+}
+
 @media (max-width: 576px) {
   .topheader {
     height: auto;
