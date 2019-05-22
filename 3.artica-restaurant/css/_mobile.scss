@@ -47,4 +47,19 @@
 		}
 	}
 	// end slide show
+
+	.about{
+		margin: 50px 0px;
+
+		&__details{
+
+			&__readmore{
+				margin-bottom: 20px;
+				display: block;
+			}
+
+		}
+		// end details
+	}
+	// end about
 }

@@ -15,6 +15,7 @@
     src="https://code.jquery.com/jquery-1.12.4.min.js"
     integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
     crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.js"></script>
     <!-- fontawesome -->
     <!-- font -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
@@ -56,7 +57,7 @@
         <!-- end container -->
     </div>
     <!-- end top header -->
-    <div class="menu">
+    <div class="mynav">
         <nav class="navbar navbar-expand-lg navbar-light ">
             <div class="container">
                 <a class="navbar-brand" href="#">
@@ -67,7 +68,7 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto menu__right">
+                    <ul class="navbar-nav ml-auto mynav__right">
                       <li class="nav-item active">
                         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
@@ -189,6 +190,351 @@
     </div>
 </div>
 <!-- endl slideshow -->
+<div class="about">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <div class="about__details wow bounceInLeft">
+                    <a href="" class="about__details__img">
+                        <img src="images/featured-1.jpg" alt="">
+                    </a>
+                    <!-- end img  -->
+                    <a href="" class="about__details__name">
+                        Our Restaruant Story
+                    </a>
+                    <!-- end name -->
+                    <p>Sed ut perspiciatis unde omnis iste natus errorsit voluptatem accusantium doloremque laudantium thes hatles tooest surf totam rem aperiam.</p>
+                    <a href="" class="about__details__readmore">
+                        Read More
+                    </a>
+                </div>
+                <!-- end about__details -->
+            </div>
+            <!-- end col-4 -->
+
+            
+            <div class="col-sm-4 text-center">
+                <div class="about__details wow bounceInUp">
+                    <a href="" class="about__details__img">
+                        <img src="images/featured-2.jpg" alt="">
+                    </a>
+                    <!-- end img  -->
+                    <a href="" class="about__details__name">
+                        About Our Master Chefs
+                    </a>
+                    <!-- end name -->
+                    <p>Sed ut perspiciatis unde omnis iste natus errorsit voluptatem accusantium doloremque laudantium thes hatles tooest surf totam rem aperiam.</p>
+                    <a href="" class="about__details__readmore">
+                        Read More
+                    </a>
+                </div>
+                <!-- end about__details -->
+            </div>
+            <!-- end col-4 -->
+
+            
+            <div class="col-sm-4 text-center">
+                <div class="about__details wow bounceInRight">
+                    <a href="" class="about__details__img">
+                        <img src="images/featured-3.jpg" alt="">
+                    </a>
+                    <!-- end img  -->
+                    <a href="" class="about__details__name">
+                        Check Our Sweet Courses
+                    </a>
+                    <!-- end name -->
+                    <p>Sed ut perspiciatis unde omnis iste natus errorsit voluptatem accusantium doloremque laudantium thes hatles tooest surf totam rem aperiam.</p>
+                    <a href="" class="about__details__readmore">
+                        Read More
+                    </a>
+                </div>
+                <!-- end about__details -->
+            </div>
+            <!-- end col-4 -->
+
+            
+        </div>
+        <!-- end row  -->
+    </div>
+    <!-- endl container  -->
+</div>
+<!-- end about -->
+
+<div class="banner">
+    <div class="banner__title text-center">
+            <h4>Our Delicious Menu Items</h4>
+            <h5>Fresh And Healthy Food Available</h5>
+    </div>
+    <!-- end title -->
+</div>
+<!-- end banner -->
+<div class="menu">
+    <div class="menu__categorys ">
+        <ul>
+            <li data-filter="*" class="active">All</li>
+            <li data-filter =".breakfast">Break Fast</li>
+            <li data-filter=".lunch">Lunch</li>
+            <li data-filter=".dinner">Dinner</li>
+        </ul>
+    </div>
+    <!-- end menu__categorys -->
+    <div class="menu__list">
+                    <div class="food dinner">
+                        <div class="food__left">
+                            <img src="images/dish-1-86x86.jpg" alt="">
+                        </div>
+                        <!-- end left -->
+                        <div class="food__right">
+                            <div class="info">
+                                <div class="name">
+                                    Gosh Egg-White Omelet  
+                                </div>
+                                <!-- end name -->
+                                <div class="price">
+                                    $25.40
+                                </div>
+                                <!-- end price -->
+                            </div>
+                            <!-- end info-->
+                            <div class="clear"></div>
+                            <div class="component">
+                                Mussel with tomato sauce, wine
+                            </div>
+                        </div>
+                        <!-- end right -->
+                    </div>
+                        <!-- end food -->
+                    
+                    <div class="food dinner">
+                        <div class="food__left">
+                            <img src="images/dish-2-86x86.jpg" alt="">
+                        </div>
+                        <!-- end left -->
+                        <div class="food__right">
+                            <div class="info">
+                                <div class="name">
+                                    Powered Turkey Meatballs
+                                </div>
+                                <!-- end name -->
+                                <div class="price">
+                                    $20.00
+                                </div>
+                                <!-- end price -->
+                            </div>
+                            <!-- end info-->
+                            <div class="clear"></div>
+                            <div class="component">
+                                Shrimp, fresh garlic, olive oil
+                            </div>
+                        </div>
+                        <!-- end right -->
+                    </div>
+                        <!-- end food -->
+                    <div class="food breakfast">
+                        <div class="food__left">
+                            <img src="images/dish-3-86x86.jpg" alt="">
+                            <div class="new">New</div>
+                        </div>
+                        <!-- end left -->
+                        <div class="food__right">
+                            <div class="info">
+                                <div class="name">
+                                    Creamy Feta Salad Dressing  
+                                </div>
+                                <!-- end name -->
+                                <div class="price">
+                                    $55.20
+                                </div>
+                                <!-- end price -->
+                            </div>
+                            <!-- end info-->
+                            <div class="clear"></div>
+                            <div class="component">
+                                Salt, garlic, pork tenderloin                            </div>
+                        </div>
+                        <!-- end right -->
+                    </div>
+                        <!-- end food -->
+                    <div class="food lunch">
+                        <div class="food__left">
+                            <img src="images/dish-4.jpg" alt="">
+                        </div>
+                        <!-- end left -->
+                        <div class="food__right">
+                            <div class="info">
+                                <div class="name">
+                                    Roasted Red Pepper Hummus 
+                                </div>
+                                <!-- end name -->
+                                <div class="price">
+                                    $40.20
+                                </div>
+                                <!-- end price -->
+                            </div>
+                            <!-- end info-->
+                            <div class="clear"></div>
+                            <div class="component">
+                                Black beans, pork tenderloin
+                            </div>
+                        </div>
+                        <!-- end right -->
+                    </div>
+                        <!-- end food -->
+                    <div class="food dinner">
+                        <div class="food__left">
+                            <img src="images/dish-5.jpg" alt="">
+                        </div>
+                        <!-- end left -->
+                        <div class="food__right">
+                            <div class="info">
+                                <div class="name">
+                                     Hearty Grain Breakfast  
+                                </div>
+                                <!-- end name -->
+                                <div class="price">
+                                    $55.20
+                                </div>
+                                <!-- end price -->
+                            </div>
+                            <!-- end info-->
+                            <div class="clear"></div>
+                            <div class="component">
+                                Salt, garlic, pork tenderloin
+                            </div>
+                        </div>
+                        <!-- end right -->
+                    </div>
+                        <!-- end food -->
+                    <div class="food lunch">
+                        <div class="food__left">
+                            <img src="images/dish-6.jpg" alt="">
+                            <div class="new">New</div>
+                        </div>
+                        <!-- end left -->
+                        <div class="food__right">
+                            <div class="info">
+                                <div class="name">
+                                    Gosh Egg-White Omelet  
+                                </div>
+                                <!-- end name -->
+                                <div class="price">
+                                    $25.40
+                                </div>
+                                <!-- end price -->
+                            </div>
+                            <!-- end info-->
+                            <div class="clear"></div>
+                            <div class="component">
+                                Mussel with tomato sauce, wine
+                            </div>
+                        </div>
+                        <!-- end right -->
+                    </div>
+                        <!-- end food -->
+                    
+                    <div class="food breakfast">
+                        <div class="food__left">
+                            <img src="images/dish-7.jpg" alt="">
+                        </div>
+                        <!-- end left -->
+                        <div class="food__right">
+                            <div class="info">
+                                <div class="name">
+                                    Powered Turkey Meatballs
+                                </div>
+                                <!-- end name -->
+                                <div class="price">
+                                    $20.00
+                                </div>
+                                <!-- end price -->
+                            </div>
+                            <!-- end info-->
+                            <div class="clear"></div>
+                            <div class="component">
+                                Shrimp, fresh garlic, olive oil
+                            </div>
+                        </div>
+                        <!-- end right -->
+                    </div>
+                        <!-- end food -->
+                    <div class="food dinner">
+                        <div class="food__left">
+                            <img src="images/dish-8.jpg" alt="">
+                        </div>
+                        <!-- end left -->
+                        <div class="food__right">
+                            <div class="info">
+                                <div class="name">
+                                    Creamy Feta Salad Dressing  
+                                </div>
+                                <!-- end name -->
+                                <div class="price">
+                                    $55.20
+                                </div>
+                                <!-- end price -->
+                            </div>
+                            <!-- end info-->
+                            <div class="clear"></div>
+                            <div class="component">
+                                Salt, garlic, pork tenderloin                            </div>
+                        </div>
+                        <!-- end right -->
+                    </div>
+                        <!-- end food -->
+                    <div class="food breakfast">
+                        <div class="food__left">
+                            <img src="images/dish-9-86x86.jpg" alt="">
+                        </div>
+                        <!-- end left -->
+                        <div class="food__right">
+                            <div class="info">
+                                <div class="name">
+                                    Roasted Red Pepper Hummus 
+                                </div>
+                                <!-- end name -->
+                                <div class="price">
+                                    $40.20
+                                </div>
+                                <!-- end price -->
+                            </div>
+                            <!-- end info-->
+                            <div class="clear"></div>
+                            <div class="component">
+                                Black beans, pork tenderloin
+                            </div>
+                        </div>
+                        <!-- end right -->
+                    </div>
+                        <!-- end food -->
+                    <div class="food lunch">
+                        <div class="food__left">
+                            <img src="images/dish-11-86x86.jpg" alt="">
+                        </div>
+                        <!-- end left -->
+                        <div class="food__right">
+                            <div class="info">
+                                <div class="name">
+                                     Hearty Grain Breakfast  
+                                </div>
+                                <!-- end name -->
+                                <div class="price">
+                                    $55.20
+                                </div>
+                                <!-- end price -->
+                            </div>
+                            <!-- end info-->
+                            <div class="clear"></div>
+                            <div class="component">
+                                Salt, garlic, pork tenderloin
+                            </div>
+                        </div>
+                        <!-- end right -->
+                    </div>
+                        <!-- end food -->
+    </div>
+    <!-- end menu__list -->
+</div>
+<!-- end menu -->
 <!-- Optional JavaScript -->
 <script src="index.js"></script>
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
