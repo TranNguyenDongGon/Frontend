@@ -49,22 +49,21 @@
 
 	// js for slide of testimonial
 	var curIndex = 0;
+	var trangthai = 'chua click';
 	// biến cục bộ để có thể thay đổi giá trị
 	for(var i = 0; i < testimonial_button_slide.length;i++){
-
-		var indexActive;
-		for(indexActive = 0;testimonial_button_slide[i].classList !== 'active';indexActive++){};
-		console.log(indexActive);
 		testimonial_button_slide[i].addEventListener('click',function(){
+
+			if(trangthai == 'click roi'){return false};
+			trangthai = 'click roi';
 			// xu ly nut khi active
 			for(var i = 0 ; i < testimonial_button_slide.length;i++){
 				testimonial_button_slide[i].classList.remove('active');
 			}
 			this.classList.add('active');
-			var curSlide = slidesOfTestimonial[curIndex];
-			curButton = this;
 
-			// tinh vi tri cua active
+			var curSlide = slidesOfTestimonial[curIndex];
+			curButton = this;			// tinh vi tri cua active
 			for(curIndex = 0; curButton = curButton.previousElementSibling;curIndex++);
 			var nextSlide = slidesOfTestimonial[curIndex];
 
@@ -74,15 +73,16 @@
 			curSlide.addEventListener('webkitAnimationEnd',function(){
 				curSlide.classList.remove('active');
 				curSlide.classList.remove('leftout');
+				trangthai = 'chua click';
 			})
 
 			nextSlide.addEventListener('webkitAnimationEnd',function(){
 				nextSlide.classList.remove('rightin');
 				nextSlide.classList.add('active');
+				trangthai = 'chua click';
 			})
 		})
 	}
-	
 },false)
 
 
