@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1035,6 +1036,84 @@ html, body {
 
 .book__bottom a.booknow:hover {
   text-decoration: none;
+}
+
+.testimonials {
+  width: 100%;
+  height: 500px;
+  overflow: hidden;
+  position: relative;
+}
+
+.testimonials .testimonial {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+}
+
+.testimonials .testimonial.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.testimonials .testimonial .slideCaption i {
+  font-size: 50px;
+}
+
+.testimonials .testimonial .slideCaption p {
+  font-family: "Roboto Slab", serif;
+  font-size: 18px;
+  line-height: 36px;
+  padding: 47px 0 37px 0;
+}
+
+.testimonials .testimonial .slideCaption p:before {
+  content: "“ ";
+}
+
+.testimonials .testimonial .slideCaption p:after {
+  content: " ”";
+}
+
+.testimonials .testimonial .slideCaption .name {
+  font-size: 29px;
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  color: #feb518;
+}
+
+.testimonials .testimonial .slideCaption .name:before {
+  content: "-  ";
+  color: white;
+}
+
+.testimonials .slidebutton {
+  bottom: 40px;
+}
+
+.testimonials .slidebutton li {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid #d0d0d0;
+  background: none;
+}
+
+.testimonials .slidebutton li.active {
+  background: #feb518;
+  border: none;
 }
 
 @media (max-width: 576px) {
