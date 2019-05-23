@@ -765,11 +765,22 @@ html,body{
 				}
 				// end slidecaption
 
-	}
+				&.leftout{
+					animation: leftout 1s forwards;
+				}
+
+				&.rightin{
+					animation: rightin 1s forwards;
+				}
+		}
 	// endl testimonial
 	.slidebutton{
+		position: absolute;
 		bottom: 40px;
+		left: 47%;
+		z-index: 3;
 		li{
+			display: inline-block;
 			width: 7px;
 			height: 7px;
 			border-radius: 50%;
@@ -787,6 +798,23 @@ html,body{
 	// end slide-button
 }
 
+@keyframes leftout{
+	from{
+		transform: translateX(0%);opacity: 1;visibility: visible;
+	}
+	to{
+		transform: translateX(-100%);opacity: 0;visibility: hidden;;
+	}
+}
+
+@keyframes rightin{
+	from{
+		transform: translateX(100%);opacity: 0;visibility: hidden;
+	}
+	to{
+		transform: translateX(0%);opacity: 1;visibility: visible;
+	}
+}
 // end testimonials
 @import "mobile";
 @import "tablet";

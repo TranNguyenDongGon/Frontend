@@ -1098,11 +1098,25 @@ html, body {
   color: white;
 }
 
+.testimonials .testimonial.leftout {
+  -webkit-animation: leftout 1s forwards;
+          animation: leftout 1s forwards;
+}
+
+.testimonials .testimonial.rightin {
+  -webkit-animation: rightin 1s forwards;
+          animation: rightin 1s forwards;
+}
+
 .testimonials .slidebutton {
+  position: absolute;
   bottom: 40px;
+  left: 47%;
+  z-index: 3;
 }
 
 .testimonials .slidebutton li {
+  display: inline-block;
   width: 7px;
   height: 7px;
   border-radius: 50%;
@@ -1114,6 +1128,66 @@ html, body {
 .testimonials .slidebutton li.active {
   background: #feb518;
   border: none;
+}
+
+@-webkit-keyframes leftout {
+  from {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@keyframes leftout {
+  from {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+  to {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+@-webkit-keyframes rightin {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+@keyframes rightin {
+  from {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 @media (max-width: 576px) {

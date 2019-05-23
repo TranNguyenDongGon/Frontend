@@ -6,6 +6,8 @@
 	var prev_slide_button = document.querySelector('.slideButton .prev');
 	var next_slide_button = document.querySelector('.slideButton .next');
 	var dishes = document.querySelectorAll('.dish');
+	var testimonial_button_slide = document.querySelectorAll('.slidebutton li');
+	var slidesOfTestimonial = document.querySelectorAll('.testimonial');
 	var added = false;
 	window.addEventListener('scroll',function(){
 
@@ -45,7 +47,41 @@
 		})
 	}
 
+	// js for slide of testimonial
+	var curIndex = 0;
+	// biến cục bộ để có thể thay đổi giá trị
+	for(var i = 0; i < testimonial_button_slide.length;i++){
 
+		var indexActive;
+		for(indexActive = 0;testimonial_button_slide[i].classList !== 'active';indexActive++){};
+		console.log(indexActive);
+		testimonial_button_slide[i].addEventListener('click',function(){
+			// xu ly nut khi active
+			for(var i = 0 ; i < testimonial_button_slide.length;i++){
+				testimonial_button_slide[i].classList.remove('active');
+			}
+			this.classList.add('active');
+			var curSlide = slidesOfTestimonial[curIndex];
+			curButton = this;
+
+			// tinh vi tri cua active
+			for(curIndex = 0; curButton = curButton.previousElementSibling;curIndex++);
+			var nextSlide = slidesOfTestimonial[curIndex];
+
+			curSlide.classList.add('leftout');
+			nextSlide.classList.add('rightin');
+
+			curSlide.addEventListener('webkitAnimationEnd',function(){
+				curSlide.classList.remove('active');
+				curSlide.classList.remove('leftout');
+			})
+
+			nextSlide.addEventListener('webkitAnimationEnd',function(){
+				nextSlide.classList.remove('rightin');
+				nextSlide.classList.add('active');
+			})
+		})
+	}
 	
 },false)
 
