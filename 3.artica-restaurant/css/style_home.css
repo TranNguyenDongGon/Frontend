@@ -632,6 +632,7 @@ html, body {
 }
 
 .banner.bg {
+  margin-top: 30px;
   background: -webkit-gradient(linear, left top, left bottom, from(#00000091), to(#0000009e)), url(../images/8.jpg) center;
   background: linear-gradient(#00000091, #0000009e), url(../images/8.jpg) center;
   background-attachment: fixed;

@@ -282,6 +282,7 @@ html,body{
 	background-attachment: fixed;
 
 	&.bg{
+		margin-top: 30px;
 		background: linear-gradient(#00000091, #0000009e), url(../images/8.jpg) center;	
 		background-attachment: fixed;
 	}
@@ -705,5 +706,7 @@ html,body{
 	// end bottom
 }
 // end book
+
+
 @import "mobile";
 @import "tablet";
