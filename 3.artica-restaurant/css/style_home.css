@@ -1190,6 +1190,76 @@ html, body {
   }
 }
 
+.blogs {
+  width: 100%;
+  margin: 120px 0px;
+}
+
+.blogs h5 {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  font-size: 40px;
+  color: #feb518;
+}
+
+.blogs h6 {
+  font-family: "Roboto Slab", serif;
+  font-size: 24px;
+  color: #333333;
+  font-weight: bold;
+  margin-bottom: 0px;
+}
+
+.blogs .blog {
+  margin-top: 60px;
+  width: 100%;
+}
+
+.blogs .blog__img img {
+  width: 100%;
+}
+
+.blogs .blog .name {
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  color: #333333;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+.blogs .blog p {
+  font-family: "Roboto Slab", serif;
+  font-size: 14px;
+  color: #777777;
+  line-height: 24px;
+}
+
+.blogs .blog p span {
+  color: #feb518;
+}
+
+.blogs .blog__bottom {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Roboto Slab", serif;
+  color: #333333;
+  border-top: 1px dotted #d6d6d6;
+  padding-top: 20px;
+  margin-top: 10px;
+}
+
+.blogs .blog__bottom .readmore {
+  width: 50%;
+  font-weight: bold;
+}
+
+.blogs .blog__bottom .likes {
+  width: 50%;
+  text-align: right;
+}
+
 @media (max-width: 576px) {
   .topheader {
     height: auto;

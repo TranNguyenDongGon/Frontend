@@ -816,5 +816,82 @@ html,body{
 	}
 }
 // end testimonials
+
+.blogs{
+	width: 100%;
+	margin: 120px 0px;
+
+	h5{
+		font-family: $font-dancing;
+		font-weight: bold;
+		font-size: 40px;
+		color: $highlight-color;
+	}
+
+	h6{
+		font-family: $font-roboto;
+		font-size: 24px;
+		color: #333333;
+		font-weight: bold;
+		margin-bottom: 0px;
+	}
+
+	.blog{
+		margin-top: 60px;
+		width: 100%;
+
+		&__img{
+
+			img{
+				width: 100%;
+			}
+		}
+		// end img
+
+		.name{
+			font-family: $font-oswald;
+			font-size: 18px;
+			color:#333333;
+			margin-top:25px;
+			margin-bottom: 10px;
+		}
+
+		p{
+			font-family: $font-roboto;
+			font-size: 14px;
+			color: #777777;
+			line-height: 24px;
+
+			span {
+				color:$highlight-color;
+			}
+		}
+		// end p
+
+		&__bottom{
+			width: 100%;
+			display: flex;
+			font-family: $font-roboto;
+			color: #333333;
+			border-top: 1px dotted #d6d6d6;
+			padding-top: 20px;
+			margin-top: 10px;
+
+			.readmore{
+				width: 50%;
+				font-weight: bold;
+			}
+
+			.likes{
+				width: 50%;
+				text-align: right;
+			}
+		}
+		// end bottom
+
+	}
+	// end blog
+}
+// end blog
 @import "mobile";
 @import "tablet";
