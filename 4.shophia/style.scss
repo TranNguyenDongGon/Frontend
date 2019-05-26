@@ -175,4 +175,67 @@
     // end banner
 }
 // end banner
+
+.support{
+    width: 100%;
+    display: flex;
+    margin: 66px 0 100px ;
+    .left{
+        width: 430px;
+        height: 100px;
+        background-color: $highlight-color;
+        -webkit-clip-path: polygon(93% 0, 100% 50%, 93% 100%, 0 100%, 0 47%, 0 0);
+clip-path: polygon(93% 0, 100% 50%, 93% 100%, 0 100%, 0 47%, 0 0);
+    }
+    // end left
+    .mid{
+        width: 444px;
+        height: 100px;
+        background-color: black;
+        -webkit-clip-path: polygon(100% 0%, 93% 50%, 100% 100%, 0 100%, 7% 50%, 0 0);
+        clip-path: polygon(100% 0%, 93% 50%, 100% 100%, 0 100%, 7% 50%, 0 0);
+
+    }
+    // end mid
+    .right{
+        width: 430px;
+        height: 100px;
+        background-color: $highlight-color;
+        -webkit-clip-path: polygon(100% 0, 100% 50%, 100% 100%, 7% 100%, 0 50%, 7% 0);
+        clip-path: polygon(100% 0, 100% 50%, 100% 100%, 7% 100%, 0 50%, 7% 0);
+    }
+    // end right
+
+    &__content{
+        font-family: $font-lato;
+        display: flex;
+        color: white;
+        i{
+            display: inline-block;
+            line-height: 100px;
+            width: 100px;
+            font-size: 40px;
+            text-align: center;
+
+            &.fa-clock{
+                margin-left: 20px;
+            }
+        }
+        // end i
+
+        &__right{
+            h1{
+                font-size: 30px;
+                font-weight: bold;
+                margin-top: 25px;
+                margin-bottom: 0;
+            }
+        }
+        // end right
+    }
+    // end content
+
+} 
+// end support 
+
 @import "mobile";
