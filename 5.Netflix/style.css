@@ -12,6 +12,13 @@ body {
   color: #999;
 }
 
+.container {
+  max-width: 70%;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 2rem;
+}
+
 ul {
   list-style: none;
 }
@@ -31,6 +38,29 @@ p {
 
 img {
   width: 100%;
+}
+
+.text-xl {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text-lg {
+  font-size: 1.625rem;
+  margin-bottom: 1rem;
+}
+
+.text-md {
+  font-size: 1.17rem;
+  margin-bottom: 1rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-dark {
+  color: #999;
 }
 
 /*Buttons*/
@@ -147,5 +177,121 @@ img {
   font-weight: 400;
   font-size: 1.9rem;
   line-height: 1.25;
+}
+
+.tabs {
+  background-color: #141414;
+  padding-top: 1rem;
+  border-bottom: 3px solid #3d3d3d;
+}
+
+.tabs .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  grid-gap: 1rem;
+  text-align: center;
+}
+
+.tabs p {
+  font-size: 1.2rem;
+  padding-top: 0.5rem;
+}
+
+.tabs .tab-item {
+  padding: 1.5rem 0;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.tabs .tab-item:hover {
+  color: white;
+}
+
+.tabs .tab-border {
+  border-bottom: 4px solid #E50914;
+}
+
+.tab-content {
+  padding: 3rem 0;
+  background: #000;
+  color: white;
+}
+
+.tab-content #tab-1-content .tab-1-content-inner {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 2rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tab-content #tab-2-content .tab-2-content-top {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 1rem;
+  -ms-grid-columns: 3fr 1fr;
+      grid-template-columns: 3fr 1fr;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.tab-content #tab-2-content .tab-2-content-bottom {
+  margin-top: 2rem;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 2rem;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.tab-content #tab-3-content .table {
+  width: 100%;
+  margin-top: 2rem;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.tab-content #tab-3-content .table thead th {
+  text-transform: uppercase;
+  padding: 0.8rem;
+}
+
+.tab-content #tab-3-content .table tbody tr:nth-child(even) {
+  background: #222;
+}
+
+.tab-content #tab-3-content .table tbody tr th {
+  color: #999;
+  text-align: center;
+  padding: 1.2rem 0.8rem;
+}
+
+.tab-content #tab-3-content .table tbody tr th:first-child {
+  text-align: left;
 }
 /*# sourceMappingURL=style.css.map */
