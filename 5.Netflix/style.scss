@@ -16,7 +16,7 @@ body{
 }
 
 .container{
-    max-width: 70%;
+    max-width: 80%;
     margin: auto;
     overflow: hidden;
     padding:  0 2rem;
@@ -213,6 +213,17 @@ img{
     padding: 3rem 0;
     background: #000;
     color: white;
+
+    #tab-1-content,
+    #tab-2-content,
+    #tab-3-content{
+        display: none;
+    }
+
+    .show{
+        display: block!important;
+    }
+
     #tab-1-content{
         .tab-1-content-inner{
             display: grid;
@@ -287,4 +298,37 @@ img{
 }
 // end tab-content
 
+.footer{
+    max-width: 75%;
+    margin: 1rem auto;
+    overflow: auto;
+
+    a{
+        color: #999;
+        font-size: 0.9rem;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+
+    .contact{
+        display: block;
+        margin-bottom: 1.5rem;
+    }
+
+    &-cols{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2rem;
+        margin-bottom: 1rem;
+
+        li{
+            line-height: 1.9;
+        }
+    }
+
+
+}
+// end footer
 @import "mobile";
