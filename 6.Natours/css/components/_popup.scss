@@ -1,0 +1,82 @@
+.popup{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba($color: #000000, $alpha: .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+
+    &__content{
+        width: 75%;
+        height: 50rem;
+        background-color: $color-white;
+        box-shadow: 0 2rem 4rem rgba($color-black, .2);
+        @include absCenter;
+        border-radius: 3px;
+        display: table;
+        transform: translate(-50%,-50%) scale(0);
+        transition: .3s;
+    }
+
+    &__left{
+        width: 33.333333%;
+        display: table-cell;
+    }
+
+    &__right{
+        width: 66.666667%;
+        display: table-cell;
+        vertical-align: middle;
+        padding: 3rem 5rem;
+    }
+
+    &__img{
+        width: 100%;
+        display: block;
+    }
+
+    &__text{
+        font-size: 1.4rem;
+        margin-bottom: 4rem;
+
+        column-count: 2;
+        column-gap: 4rem;
+        column-rule: 1px solid $color-gray-light-2;
+
+        -moz-column-count: 2;
+        -moz-column-gap: 4rem;
+        -moz-column-rule: 1px solid $color-gray-light-2;
+    }
+
+    &:target{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &:target &__content{
+        transform: translate(-50%,-50%) scale(1);
+    }
+
+    &__close{
+        &:link,
+        &:visited{
+            color: $color-gray-dark;
+            font-size: 3rem;
+            position: absolute;
+            top: 2.5rem;
+            right: 2.5rem;
+            line-height: 1;
+            text-decoration: none;
+            display: inline-block;
+            transition: all .3s;
+        }
+
+        &:hover{
+            color: $color-primary;
+        }
+    }
+}
