@@ -15,6 +15,16 @@
         z-index: 2000;
         cursor: pointer;
         text-align: center;
+
+        @include respond(tab-port){
+            top: 3.5rem;
+            right: 3.5rem;
+        }
+
+        @include respond(phone){
+            top: 2.5rem;
+            right: 2.5rem;
+        }
     }
 
     &__background{
@@ -29,7 +39,15 @@
 
         transition: transform .8s cubic-bezier(1, 0, 0, 1) ;
 
-        // transform: scale(80);
+        @include respond(tab-port){
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include respond(phone){
+            top: 3rem;
+            right: 3rem;
+        }
     }
 
     &__nav{
@@ -45,6 +63,7 @@
     }
 
     &__list{
+        width: 100%;
         list-style: none;
         position: absolute;
         top: 50%;

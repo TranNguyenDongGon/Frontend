@@ -1,10 +1,9 @@
 body {
     font-family: "Lato", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    // font-size: 16px;
     line-height: 1.7;
     color: $color-gray-dark;
-    padding: 30px;
 }
 
 .heading-primary {
@@ -19,6 +18,11 @@ body {
         font-weight: 400;
         letter-spacing: 35px;
         animation: moveInLeft 1s ease-out;
+
+        @include respond(phone){
+            letter-spacing: 1rem;
+            font-size: 5rem;
+        }
     }
 
     &--sub {
@@ -27,6 +31,10 @@ body {
         font-weight: 700;
         letter-spacing: 17.4px;
         animation: moveInRight 1s ease-out;
+
+        @include respond(phone){
+            letter-spacing: .5rem;
+        }
     }
 
 }
@@ -41,6 +49,14 @@ body {
     color: transparent;
     letter-spacing: 2px;
     transition: all .2s;
+
+    @include respond(phone){
+        font-size: 2.5rem;
+    }
+
+    @include respond(tab-port){
+        font-size: 3rem;
+    }
 
     &:hover {
         transform: skew(15deg, 2deg) scale(1.1);

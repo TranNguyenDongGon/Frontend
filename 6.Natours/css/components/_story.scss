@@ -9,17 +9,38 @@
     transform: skew(-12deg);
     background-color: rgba($color-white, .6);
 
+    @include respond(tab-port){
+        padding: 4rem;
+        padding-left: 7rem;
+        width: 100%;
+    }
+
+    @include respond(phone){
+        transform: skew(0);
+    }
+
     &__shape {
         width: 15rem;
         height: 15rem;
         background-color: orangered;
         float: left;
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
-        -webkit-clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skew(12deg);
         position: relative;
+        border-radius: 50%;
+        overflow: hidden;
+        
+        @include respond(phone){
+            transform: translateX(-3rem) skew(0);
+        }
+
+        @supports (clip-path: polygon(0 0)) or  (-webkit-clip-path: polygon(0 0 )){
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            -webkit-clip-path: circle(50% at 50% 50%);
+
+            border-radius: none;
+        }  
     }
 
     &__img {
@@ -30,6 +51,10 @@
 
     &__text {
         transform: skew(12deg);
+        
+        @include respond(phone){
+            transform: skew(0);
+        }
     }
 
     &__caption {
