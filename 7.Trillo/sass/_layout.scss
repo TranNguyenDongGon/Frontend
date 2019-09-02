@@ -4,6 +4,12 @@
     background-color: var(--color-grey-light-1);
     box-shadow: var(--shadow-dark);
     min-height: 50rem;
+
+    @media only screen and (max-width:$bp-largest) {
+        margin: 0;
+        max-width: 100%;
+        width: 100%;
+    }   
 }
 
 .header{
@@ -20,6 +26,10 @@
 
 .content{
     display: flex;
+
+    @media only screen and (max-width:$bp-medium) {
+        flex-direction: column;
+    }   
 }
 
 .sidebar{
@@ -38,10 +48,16 @@
 }
 
 .detail{
+    font-size: 1.4rem;
     display: flex;
+    flex-wrap: wrap;
     padding: 4.5rem;
     background-color: var(--color-grey-light-1);
     border-bottom: var(--line);
+
+    @media only screen and (max-width:$bp-medium) {
+        padding: 3rem;
+    } 
 }
 
 .description{
@@ -50,10 +66,18 @@
     box-shadow: var(--shadow-light);
     margin-right: 4.5rem;
     padding: 3rem;
-    font-size: 1.4rem;
+
+    @media only screen and (max-width:$bp-medium) {
+        padding: 2rem;
+        margin-right: 3rem;
+    } 
+    
 }
 
 .user-reviews{
     flex: 1;
-    background-color: yellowgreen;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
