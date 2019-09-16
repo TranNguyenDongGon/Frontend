@@ -7,7 +7,7 @@
     "watch:sass": "sass --watch sass/main.scss css/style.css ",
     "devserver": "live-server --browser=FIREFOX",
     "start": "npm-run-all --parallel devserver watch:sass",
-    "compile:sass": "node-sass sass/main.scss css/style.comp.css",
+    "compile:sass": "sass sass/main.scss css/style.comp.css",
     "prefix:css": "postcss --use autoprefixer -b 'last 10 versions' css/style.comp.css -o css/style.prefix.css",
     "compress:css": "sass css/style.prefix.css  --style=compressed css/style.css",
     "build:css": "npm-run-all compile:sass  prefix:css compress:css"
