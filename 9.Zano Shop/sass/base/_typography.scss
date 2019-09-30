@@ -1,0 +1,16 @@
+%heading{
+    font-family: $font-default;
+    color: $color-dark;
+}
+.heading-1{
+    @extend %heading;
+    font-size: 5.5rem;
+    line-height: 1.2;
+}
+
+
+.paragraph{
+    color: $color-gray-dark-2;
+    line-height: 1.6;
+    font-size: 1.5rem;
+}

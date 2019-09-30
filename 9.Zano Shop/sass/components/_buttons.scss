@@ -1,0 +1,59 @@
+.tab{
+    display: inline-block;
+    background-color: $color-primary;
+    text-transform: uppercase;
+    color: white;
+    font-size: 1.4rem;
+    padding: 1rem 1.2rem;
+    font-weight: bold;
+}
+
+.btn{
+    background: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 1.5rem 3rem;
+    transition: .2s;
+
+    &:focus{
+        outline: none;
+        transform: translateY(5px);
+    }
+
+
+}
+.btn-primary{
+    text-transform: uppercase;
+    color: $color-dark;
+    border: 3px solid $color-primary;
+    border-radius: 30px;
+    
+
+
+    .btn-text{
+        display: inline-block;
+        transform: translateX(10px);
+        transition: all .3s;
+    }
+
+    .btn-rarr{
+        display: inline-block;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateX(10px);
+        transition: all .3s;
+    }
+
+    &:hover{
+        .btn-text{
+            transform: translateX(0);
+        }
+    
+        .btn-rarr{
+            display: inline-block;
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(0);
+        }
+    }
+}
