@@ -1,0 +1,46 @@
+.benefits{
+    display: flex;
+    justify-content: space-between;
+}
+
+.benefit{
+    flex: 0 0 32%;
+    padding: 1.6rem 1.8rem;
+    cursor: pointer;
+    box-shadow: none;
+    transition: all .2s;
+    position: relative;
+
+    &::before{
+        content: "";
+
+        position: absolute;
+        border: 1px solid $color-primary;
+        top: 1.6rem;
+        left: 1.8rem;
+        width: 90%;
+        height: 90%;
+
+
+    }
+
+    &__contents{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 4.5rem 3.5rem;
+        text-align: center;
+        height: max-content; 
+    }
+
+    &__icon{
+        width: 94px;
+        height: 69px;
+        img{
+            width: 100%;
+        }
+    }
+    &:hover{
+        box-shadow: 0 0 7px 5px #eeeeee;
+    }
+}
